@@ -1,0 +1,9 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+<%= User.find_by(id: params[:user_id]).name %>
+<%= User.find_by(id: params[:user_id]).email %>
+<%= @user.name %>
+<%=link_to "edit",users_edit_path%>
+        
+ 
+
