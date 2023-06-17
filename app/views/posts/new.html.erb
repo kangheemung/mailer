@@ -1,0 +1,10 @@
+<h1>Posts#new</h1>
+<p>Find me in app/views/posts/new.html.erb</p>
+
+<%= form_for @post,url: p_create_path do |f| %>
+ <%= f.label :title %>
+ <%= f.text_field :title %></br>
+ <%= f.label :content%>
+ <%= f.text_field :contentl, class: "class_name", maxlength: 40 %></br>
+ <%= f.submit "click "%>
+<% end %>

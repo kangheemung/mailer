@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'posts/new'=> 'posts#new',as: 'posts_new'
+  post 'posts/create'=> 'posts#create',as: 'p_create'
+  get   'posts/edit'
   root 'home#top'
   get 'users/new'=>'users#new',as: 'users_new'
   post 'users/create'=>'users#create',as: 'users_create'
