@@ -1,2 +1,9 @@
 <h1>Posts#edit</h1>
 <p>Find me in app/views/posts/edit.html.erb</p>
+<%= form_for @post, url: post_update_path(@post.id) do |f| %>
+ <%= f.label :title %>
+ <%= f.text_field :title %></br>
+ <%= f.label :content%>
+ <%= f.text_field :content, class: "class_name", maxlength: 40 %></br>
+ <%= f.submit "click "%>
+<% end %>

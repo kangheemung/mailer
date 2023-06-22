@@ -4,6 +4,11 @@
 <%= User.find_by(id: params[:user_id]).email %>
 <%= @user.name %>
 <%=link_to "edit",users_edit_path%>
+<% @posts.each do |post| %>
+<p><%= post.title%></p>
+<p><%= post.content%></p>
+<%=link_to "post_edit",post_edit_path %>
+<% end %>
         
  
 
