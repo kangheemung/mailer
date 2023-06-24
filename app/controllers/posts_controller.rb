@@ -9,7 +9,6 @@ class PostsController < ApplicationController
       flash[:success] = "Post created!"
       redirect_to users_show_path
     else
-     
       render :new
     end  
   end
@@ -26,7 +25,11 @@ class PostsController < ApplicationController
         render :edit
      end
   end
-    private
+  def destroy
+    @post=Post.find_by(id: params[:user_id]).destroy
+      redirect_to users_show_path(@post.id) 
+  end
+  private
     def post_params
        params.require(:post).permit(:title,:content,:user_id)
     end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post 'posts/:user_id/create'=> 'posts#create',as: 'p_create'
   get  'posts/:user_id/edit'=> 'posts#edit',as: 'post_edit'
   patch 'posts/:user_id/update'=>'posts#update',as: 'post_update'
-  
+  delete 'posts/:user_id/destroy'=> 'posts#destroy',as: 'post_destroy'
   get 'users/new'=>'users#new',as: 'users_new'
   post 'users/create'=>'users#create',as: 'users_create'
   get 'users/:user_id/edit'=>'users#edit',as: 'users_edit'
