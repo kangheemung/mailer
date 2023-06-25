@@ -13,6 +13,7 @@
     <% if User.find_by(id: session[:user_id]).present? %>
       <%= link_to "mypage",users_show_path(User.find_by(id: session[:user_id]).id) %>
       <%= link_to "post",posts_new_path(User.find_by(id: session[:user_id]).id) %>
+      <%= link_to "top",root_path%>
     <% else %>
       <%= link_to "sign up",users_new_path %>
       <%= link_to "log_in",sessions_new_path %>
